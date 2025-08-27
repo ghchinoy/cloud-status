@@ -7,7 +7,7 @@ This directory contains a Gemini CLI extension for the `cloud-status` tool.
 To install this extension, run the following command:
 
 ```
-gemini extensions install /Users/ghchinoy/dev/cloud-status/extension
+gemini extensions install extension/
 ```
 
 ## Prerequisites
@@ -18,12 +18,12 @@ This extension assumes that you have the `cloud-status` binary in your system's 
 
 Once installed, the `cloud-status` MCP server will be started automatically when you run `gemini`.
 
-You can then interact with the `cloud-status` tool using the Gemini CLI. For example:
+You can then interact with the `cloud-status` tool using the Gemini CLI.
 
 ```
-gemini /cloud-status.current
-gemini /cloud-status.history
+What's the service health of google cloud?
 ```
+
 
 ## Custom Commands
 
