@@ -1,0 +1,8 @@
+description = "Get the historical status of Google Cloud services."
+prompt = """
+Use the /cloud-status.history tool to get the historical status of Google Cloud services.
+
+Any arguments passed to this command should be passed along to the tool.
+
+{{args}}
+"""

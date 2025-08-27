@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"fmt"
+	"log"
 	"os"
 
 	"github.com/ghchinoy/cloud-status/mcp"
@@ -19,12 +19,12 @@ var rootCmd = &cobra.Command{
 		mcpHttpAddr, _ := cmd.Flags().GetString("mcp-http")
 
 		if mcpFlag {
-			fmt.Println("Starting MCP server on stdio...")
+			log.Println("Starting MCP server on stdio...")
 			return mcp.Start("")
 		}
 
 		if mcpHttpAddr != "" {
-			fmt.Printf("Starting MCP server on HTTP at %s...\n", mcpHttpAddr)
+			log.Printf("Starting MCP server on HTTP at %s...\n", mcpHttpAddr)
 			return mcp.Start(mcpHttpAddr)
 		}
 
@@ -43,7 +43,7 @@ func Execute() {
 
 func init() {
 
-cobra.OnInitialize(initConfig)
+	cobra.OnInitialize(initConfig)
 
 	rootCmd.Flags().Bool("mcp", false, "Start the application in MCP server mode over stdio.")
 	rootCmd.Flags().String("mcp-http", "", "Start the application in MCP server mode over HTTP, listening on the given address.")

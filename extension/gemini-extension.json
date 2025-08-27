@@ -1,0 +1,10 @@
+{
+  "name": "cloud-status",
+  "version": "0.0.1",
+  "mcpServers": {
+    "cloud-status": {
+      "command": "cloud-status",
+      "args": ["--mcp"]
+    }
+  }
+}

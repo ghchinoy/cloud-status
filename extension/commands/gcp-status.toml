@@ -1,0 +1,8 @@
+description = "Get the current status of Google Cloud services."
+prompt = """
+Use the /cloud-status.current tool to get the current status of Google Cloud services.
+
+Any arguments passed to this command should be passed along to the tool.
+
+{{args}}
+"""
